@@ -5,7 +5,7 @@ const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
 // Set our port to 3005
-const PORT = 3005;
+const PORT = process.env.PORT || 3005;
 
 const notesDB = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json')));
 
